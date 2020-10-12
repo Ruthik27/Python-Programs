@@ -6,5 +6,5 @@ for i in range(1001): #loop added so it continues till it reaches end of range
         digit = i %10 # using 10 modulus so to get last digit
         result = result + digit ** n #adding  on the cubes
         i = i // 10 # eliminating the used number (trunket div= gives only int part)
-    if num == result: 
-        print(num)
+    if num == result: # if they are equal means we got our amrstrong no
+        print(num) # printing the number and going back to for loop
