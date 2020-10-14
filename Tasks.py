@@ -9,7 +9,8 @@ def search():
         sql = "select * from student where Rollno='%s'"%Rollno.get()
         cur.execute(sql)
         result = cur.fetchone()
-        name.set(result[2])
+        name.set(result[1])
+        age.set(result[2])
         e1.configure(state = 'disabled')
         con.close()
     except:
