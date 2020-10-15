@@ -9,7 +9,7 @@ def search():
         sql = "select * from student where Rollno='%s'"%Rollno.get()   #querry tht should be performed
         cur.execute(sql)     #execution
         result = cur.fetchone()   #getting one value
-        name.set(result[1])   
+        name.set(result[1])
         age.set(result[2])
         e1.configure(state = 'disabled')
         con.close()
@@ -17,13 +17,13 @@ def search():
         messagebox.showinfo('No Data','No such data available')
         clear()
 
-def clear():
-    Rollno.set('')
+def clear():   # to clear values
+    Rollno.set('') #setting to null
     name.set('')
     age.set('')
     e1.configure(state='normal')
 
-def add():
+def add():  # using the same just changing querry and messagebox info
     try:
         con = pymsql.connect(user='root', password='', host='localhost', database='db')
         cur = con.cursor()
@@ -35,7 +35,7 @@ def add():
     except:
         messagebox.showinfo('Error','Error in data entry...')
 
-def update():
+def update(): # using the same just changing querry and messagebox info
     try:
         con = pymsql.connect(user='root', password='', host='localhost', database='db')
         cur = con.cursor()
