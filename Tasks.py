@@ -47,7 +47,7 @@ def update(): # using the same just changing querry and messagebox info
     except:
         messagebox.showinfo('Error','Error occured...')
 
-def delete():
+def delete(): # using the same just changing querry and messagebox info
     try:
         con = pymsql.connect(user='root', password='', host='localhost', database='db')
         cur = con.cursor()
