@@ -1,6 +1,6 @@
-import pymsql
-from tkinter import *
-from tkinter import messagebox
+import pymsql   #for database
+from tkinter import *    # for cursor
+from tkinter import messagebox  # same for window operation
 
 def search():
     try:
@@ -58,4 +58,3 @@ def delete():
         messagebox.showinfo('Success','Rrcord deleted...')
     except:
         messagebox.showinfo('Error','Error occured...')
-        
