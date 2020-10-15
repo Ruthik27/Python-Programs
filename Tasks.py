@@ -4,12 +4,12 @@ from tkinter import messagebox  # same for window operation
 
 def search():
     try:
-        con = pymsql.connect(user='root', password='', host='localhost', database='db')
-        cur = con.cursor()
-        sql = "select * from student where Rollno='%s'"%Rollno.get()
-        cur.execute(sql)
-        result = cur.fetchone()
-        name.set(result[1])
+        con = pymsql.connect(user='root', password='', host='localhost', database='db')  #connection
+        cur = con.cursor()    #same
+        sql = "select * from student where Rollno='%s'"%Rollno.get()   #querry tht should be performed
+        cur.execute(sql)     #execution
+        result = cur.fetchone()   #getting one value
+        name.set(result[1])   
         age.set(result[2])
         e1.configure(state = 'disabled')
         con.close()
