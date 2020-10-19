@@ -58,3 +58,45 @@ def delete(): # using the same just changing querry and messagebox info
         messagebox.showinfo('Success','Rrcord deleted...')
     except:
         messagebox.showinfo('Error','Error occured...')
+
+
+
+# FOR GUI
+w1 = Tk()
+w1.title('My App')
+w1.geometry('500*200')
+ptitle = lable(w1, text '''Program to add , delete & modify records from the student table''')
+ptitle.grid(row = 0 , column = 0, columnspace =2 )
+
+Rollno = StringVar()
+name = StringVar()
+age = StringVar()
+
+l1 = lable (w1 , text = 'RollNo')
+e1 = Entry(w1 , text variable = Rollno)
+l2 = lable (w1 , text = 'Name')
+e2 = Entry(w1 , text variable = name )
+l3 = lable (w1 , text = 'Age')
+e3 = Entry(w1 , text variable = age )
+
+b1 = Button (w1, text = 'Search', command = Search)
+b2 = Button (w1, text = 'Add', command = add)
+b3 = Button (w1, text = 'Update', command = update)
+b4 = Button (w1, text = 'Delete', command = delete)
+b5 = Button (w1, text = 'Clear', command = clear)
+
+l1.grid(row =1 , column =0)
+c1.grid(row =1, column =1)
+b1.grid(row =1, column =2)
+
+l2.grid(row =2 , column =0)
+c2.grid(row =2, column =1)
+l3.grid(row =3 , column =0)
+c3.grid(row =3, column =1)
+
+b2.grid(row =4, column =0)
+b3.grid(row =4, column =1)
+b4.grid(row =5, column =0)
+b5.grid(row =5, column =1)
+
+w1.mainloop()
