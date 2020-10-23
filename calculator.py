@@ -1,7 +1,16 @@
 from tkinter import *
 
 def perform(op):
-    pass
+    a = float(n1.get())
+    b = float(n2.get())
+    if op== 'add':
+        n3.set(a+b)
+    if op== 'sub':
+        n3.set(a-b)
+    if op== 'mul':
+        n3.set(a*b)
+    if op== 'div':
+        n3.set(a/b)
 
 w1 = Tk()
 w1.title('My App')
@@ -20,7 +29,7 @@ n3 = StringVar()
 e3 = Entry(w1, textvariable = n3, justify = 'center', state = 'disabled')
 
 b1 = Button(w1,  text = 'ADD' , command = lambda: perform('add'))
-b2 = Button(w1,  text = 'SUB' , command = lambda: perform('SUB'))
+b2 = Button(w1,  text = 'SUB' , command = lambda: perform('sub'))
 b3 = Button(w1,  text = 'MUL' , command = lambda: perform('mul'))
 b4 = Button(w1,  text = 'DIV' , command = lambda: perform('div'))
 
