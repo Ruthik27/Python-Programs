@@ -1,6 +1,6 @@
 # Python Programs
  applicatons
 # current dir
-import os
-cur = os.getcwd()
+import os \n
+cur = os.getcwd() /n
 print(cur)
