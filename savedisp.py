@@ -1,6 +1,6 @@
 import pymysql
-from tkinder import *
-from tkinder import messagebox
+from tkinter import *
+from tkinter import messagebox
 
 def clear():
     rollno.set('')
@@ -51,11 +51,11 @@ rollno = StringVar()
 name=StringVar()
 age=StringVar()
 
-l1=Lable(w1, text ='RollNo ' )
+l1=Label(w1, text ='RollNo ' )
 e1=Entry(w1, textvariable = rollno)
-l2=Lable(w1, text ='Name ' )
+l2=Label(w1, text ='Name ' )
 e2=Entry(w1, textvariable = name)
-l3=Lable(w1, text ='Age ' )
+l3=Label(w1, text ='Age ' )
 e3=Entry(w1, textvariable = age)
 
 b1=Button(w1, text = 'Save', command = save)
