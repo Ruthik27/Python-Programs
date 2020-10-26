@@ -9,7 +9,7 @@ def clear():
 
 def save():
     try:
-        con = pymysql.connect(user = 'root', password = '8500', hoast ='localhost',database ='db1')
+        con = pymysql.connect(user = 'root', password = '8500', host ='localhost',database ='db1')
         cur = con.cursor()
         sql = "insert into student values ('%s', '%s', '%s')" %(rollno.get(),name.get(), age.get())
         cur.execute(sql)
@@ -23,7 +23,7 @@ def save():
 
 def displayall():
     try:
-        con = pymysql.connect(user = 'root', password = '8500', hoast ='localhost',database ='db1')
+        con = pymysql.connect(user = 'root', password = '8500', host ='localhost',database ='db1')
         cur = con.cursor()
         sql = 'select * from student'
         cur.execute(sql)
@@ -58,7 +58,7 @@ e2=Entry(w1, textvariable = name)
 l3=Label(w1, text ='Age ' )
 e3=Entry(w1, textvariable = age)
 
-b1=Button(w1, text = 'Save', command = save)
+b1=Button(w1, text = 'Save', command =save)
 b2=Button(w1, text = 'DispalyAll', command = displayall)
 b3=Button(w1, text = 'Clear', command = clear)
 
@@ -70,7 +70,7 @@ l3.grid(row=3, column = 0)
 e3.grid(row =3, column = 1)
 
 b1.grid(row=4, column=0)
-b2.grid(row=4, column=0)
+b2.grid(row=4, column=1)
 b3.grid(row=1, column=2)
 
 w1.mainloop()
